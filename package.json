@@ -9,7 +9,7 @@
     "prebuild": "rimraf dist/",
     "build": "tsc",
     "dev": "nodemon --exec yarn start --watch src/ -e ts --ignore dist",
-    "lint: "eslint ."
+    "lint": "eslint ."
   },
   "repository": {
     "type": "git",
