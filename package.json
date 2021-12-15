@@ -1,0 +1,46 @@
+{
+  "name": "cruise-bot",
+  "version": "0.0.0",
+  "description": "An open-source multipurpose discord bot, that does everything!",
+  "main": "dist/index.js",
+  "scripts": {
+    "prestart": "yarn build",
+    "start": "node dist/index.js",
+    "prebuild": "rimraf dist/",
+    "build": "tsc",
+    "dev": "nodemon --exec yarn start --watch src/ -e ts --ignore dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CeruleanCodersComm/cruise-bot.git"
+  },
+  "keywords": [
+    "discord-bot",
+    "discord",
+    "discord.js",
+    "sapphire"
+  ],
+  "author": "CeruleanCodersComm",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CeruleanCodersComm/cruise-bot/issues"
+  },
+  "homepage": "https://github.com/CeruleanCodersComm/cruise-bot#readme",
+  "devDependencies": {
+    "@types/node": "^16.11.13",
+    "@typescript-eslint/eslint-plugin": "^5.7.0",
+    "@typescript-eslint/parser": "^5.7.0",
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.2.0",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.5.4"
+  },
+  "dependencies": {
+    "@sapphire/framework": "^2.2.1",
+    "discord.js": "^13.3.1",
+    "dotenv": "^10.0.0"
+  }
+}
