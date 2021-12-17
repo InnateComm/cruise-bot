@@ -1,15 +1,18 @@
 {
   "compilerOptions": {
-    "target": "ES6",
-    "module": "CommonJS",
-    "rootDir": "src",
-    "outDir": "dist",
-    "rootDirs": ["."],
+    "experimentalDecorators": true,
+    "alwaysStrict": true,
     "strict": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
+    "module": "CommonJS",
+    "target": "ES6",
+    "resolveJsonModule": true,
+    "newLine": "lf",
+    "importHelpers": true,
+    "outDir": "./dist",
+    "removeComments": true,
+    "sourceMap": true,
     "forceConsistentCasingInFileNames": true,
-    "resolveJsonModule": true
+    "isolatedModules": false,
   },
   "exclude": ["node_modules"]
 }

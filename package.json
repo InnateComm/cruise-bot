@@ -2,13 +2,13 @@
   "name": "cruise-bot",
   "version": "0.0.0",
   "description": "An open-source multipurpose discord bot, that does everything!",
-  "main": "dist/index.js",
+  "main": "dist/launch.js",
   "scripts": {
     "prestart": "yarn build",
-    "start": "node dist/index.js",
+    "start": "node dist/launch.js",
     "prebuild": "rimraf dist/",
     "build": "tsc",
-    "dev": "nodemon --exec yarn start --watch src/ -e ts --ignore dist",
+    "dev": "nodemon --exec ts-node src/launch.ts --watch ./ -e ts,json --ignore dist",
     "lint": "eslint ."
   },
   "repository": {
@@ -28,6 +28,8 @@
   },
   "homepage": "https://github.com/CeruleanCodersComm/cruise-bot#readme",
   "devDependencies": {
+    "@sapphire/decorators": "^3.1.4",
+    "@sapphire/plugin-subcommands": "^2.1.2",
     "@types/node": "^16.11.13",
     "@typescript-eslint/eslint-plugin": "^5.7.0",
     "@typescript-eslint/parser": "^5.7.0",
@@ -36,11 +38,15 @@
     "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.2.0",
+    "nodemon": "^2.0.15",
     "rimraf": "^3.0.2",
-    "typescript": "^4.5.4"
+    "ts-node": "^10.4.0",
+    "tsc": "^2.0.3",
+    "typescript": "^4.6.0-dev.20211216"
   },
   "dependencies": {
     "@sapphire/framework": "^2.2.1",
+    "@sapphire/plugin-logger": "^2.1.1",
     "discord.js": "^13.3.1",
     "dotenv": "^10.0.0"
   }
